@@ -377,6 +377,7 @@ body {
   padding: 8rem 8rem 0 8rem;
   background: black;
   color: white;
+  z-index: 999;
 }
 .about-container{
   width: 70%;

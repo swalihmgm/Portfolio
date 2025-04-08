@@ -56,25 +56,25 @@ document.addEventListener('click', (e) => {
   animate();
 
   // Show only on dark sections
-  const darkSections = document.querySelectorAll('.dark-section');
+  // const darkSections = document.querySelectorAll('.dark-section');
 
-  window.addEventListener('mousemove', (e) => {
-    let showCursor = false;
+  // window.addEventListener('mousemove', (e) => {
+  //   let showCursor = false;
 
-    darkSections.forEach(section => {
-      const rect = section.getBoundingClientRect();
-      if (
-        e.clientX > rect.left &&
-        e.clientX < rect.right &&
-        e.clientY > rect.top &&
-        e.clientY < rect.bottom
-      ) {
-        showCursor = true;
-      }
-    });
+  //   darkSections.forEach(section => {
+  //     const rect = section.getBoundingClientRect();
+  //     if (
+  //       e.clientX > rect.left &&
+  //       e.clientX < rect.right &&
+  //       e.clientY > rect.top &&
+  //       e.clientY < rect.bottom
+  //     ) {
+  //       showCursor = true;
+  //     }
+  //   });
 
-    cursor.style.opacity = showCursor ? '1' : '0';
-  });
+  //   cursor.style.opacity = showCursor ? '1' : '0';
+  // });
 
 
 // Scroll Animations
