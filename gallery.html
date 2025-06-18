@@ -208,5 +208,41 @@
     <p>© 2025 ms creations  All rights reserved.</p>
   </footer>
 
+  <script>
+    // Mobile Menu Toggle
+const menuToggle = document.querySelector('.menu-toggle');
+const mobileMenu = document.querySelector('.mobile-menu');
+
+menuToggle.addEventListener('click', () => {
+  mobileMenu.classList.toggle('active');
+  const menuIcon = menuToggle.querySelector('svg');
+  if (mobileMenu.classList.contains('active')) {
+    menuIcon.innerHTML = `
+      <line x1="18" y1="6" x2="6" y2="18"></line>
+      <line x1="6" y1="6" x2="18" y2="18"></line>
+    `;
+  } else {
+    menuIcon.innerHTML = `
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    `;
+  }
+});
+
+// Close mobile menu when clicking outside
+document.addEventListener('click', (e) => {
+  if (!menuToggle.contains(e.target) && !mobileMenu.contains(e.target)) {
+    mobileMenu.classList.remove('active');
+    const menuIcon = menuToggle.querySelector('svg');
+    menuIcon.innerHTML = `
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    `;
+  }
+});
+  </script>
+
 </body>
 </html>

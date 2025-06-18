@@ -377,7 +377,7 @@ body {
   padding: 8rem 8rem 0 8rem;
   background: black;
   color: white;
-  z-index: 999;
+  
 }
 .about-container{
   width: 70%;
@@ -598,13 +598,20 @@ body {
 }
 
 /* Footer */
-.footer {
-  padding: 2rem;
-  text-align: center;
-  background: black;
+footer {
+  position: relative;
+  width: 100%;
+  background: #000000;
+  min-height: 100px;
+  padding: 20px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   color: white;
-  border-top: 1px solid #1f2937;
 }
+
+
 
 /* Buttons */
 .btn {

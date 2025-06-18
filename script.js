@@ -136,13 +136,5 @@ document.addEventListener("DOMContentLoaded", function () {
   //  data.message = document.getElementById('message').value
   //  console.log(data);
    
-    emailjs.sendForm('service_hc41n7a', 'template_0qci54g', contactForm)
-      .then(() => {
-        alert('Message sent successfully!');
-        contactForm.reset();
-      }, (error) => {
-        console.error('EmailJS Error:', error);
-        alert('Something went wrong. Please try again.');
-      });
   });
 });
