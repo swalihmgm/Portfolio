@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Modern Masonry Grid</title>
@@ -11,75 +12,79 @@
     }
 
     /* Navigation */
-.navbar {
-  position: fixed;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.9);
-  backdrop-filter: blur(8px);
-  color: white;
-  z-index: 1000;
-}
+    .navbar {
+      position: fixed;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      backdrop-filter: blur(8px);
+      color: white;
+      z-index: 1000;
+    }
 
-.nav-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 5rem;
-  padding: 0 2rem;
-  max-width: 1280px;
-  margin: 0 auto;
-  
-}
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 5rem;
+      padding: 0 2rem;
+      max-width: 1280px;
+      margin: 0 auto;
 
-.logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  letter-spacing: -0.025em;
-}
+    }
 
-.nav-links {
-  display: none;
-}
+    .logo,
+    .logo:link,
+    .logo:visited {
+      font-size: 1.5rem;
+      font-weight: bold;
+      letter-spacing: -0.025em;
+      text-decoration: none;
+      color: #ffffff !important;
+    }
 
-.nav-links a {
-  color: white;
-  text-decoration: none;
-  margin-left: 3rem;
-}
+    .nav-links {
+      display: none;
+    }
 
-.menu-toggle {
-  background: none;
-  border: none;
-  color: white;
-  cursor: pointer;
-}
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      margin-left: 3rem;
+    }
 
-.mobile-menu {
-  display: none;
-  padding: 1rem;
-  background: rgba(0, 0, 0, 0.95);
-}
+    .menu-toggle {
+      background: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+    }
 
-.mobile-menu.active {
-  display: block;
-}
+    .mobile-menu {
+      display: none;
+      padding: 1rem;
+      background: rgba(0, 0, 0, 0.95);
+    }
 
-.mobile-menu a {
-  display: block;
-  color: white;
-  text-decoration: none;
-  padding: 0.75rem;
-}
+    .mobile-menu.active {
+      display: block;
+    }
 
-@media (min-width: 768px) {
-  .nav-links {
-    display: flex;
-  }
-  
-  .menu-toggle {
-    display: none;
-  }
-}
+    .mobile-menu a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      padding: 0.75rem;
+    }
+
+    @media (min-width: 768px) {
+      .nav-links {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: none;
+      }
+    }
 
     .masonry {
       padding: 90px 20px;
@@ -111,7 +116,7 @@
       background: #1f1f1f;
       border-radius: 12px;
       overflow: hidden;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
     }
 
     .masonry-item img {
@@ -121,81 +126,93 @@
     }
 
     /* whatsapp icon */
-.whatsapp-float {
-  position: fixed;
-  bottom: 25px;
-  right: 25px;
-  background-color: #25D366;
-  border-radius: 50%;
-  padding: 15px;
-  z-index: 1000;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease;
-}
+    .whatsapp-float {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background-color: #25D366;
+      border-radius: 50%;
+      padding: 15px;
+      z-index: 1000;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
+    }
 
-.whatsapp-float:hover {
-  transform: scale(1.1);
-}
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+    }
 
-.whatsapp-float img {
-  width: 32px;
-  height: 32px;
-  display: block;
-  filter: invert(1); 
-}
+    .whatsapp-float img {
+      width: 32px;
+      height: 32px;
+      display: block;
+      filter: invert(1);
+    }
 
     /* Footer */
-.footer {
-  padding: 2rem;
-  text-align: center;
-  background: black;
-  color: white;
-  
-}
+    .footer {
+      padding: 2rem;
+      text-align: center;
+      background: black;
+      color: white;
+
+    }
   </style>
 </head>
+
 <body>
   <!-- Navigation -->
-  <nav class="navbar">
+  <nav class="navbar" role="navigation" aria-label="Main Navigation">
     <div class="nav-container">
-      <span class="logo">Mohamed Abid</span>
+      <a href="index.html" class="logo" aria-label="Mohamed Abid Home">Mohamed Abid</a>
       <div class="nav-links">
-        <a href="#home" class="hover-underline">Home</a>
-        <a href="#portfolio" class="hover-underline">Portfolio</a>
-        <a href="#about" class="hover-underline">About</a>
-        <a href="#contact" class="hover-underline">Contact</a>
+        <a href="index.html#home" class="hover-underline">Home</a>
+        <a href="gallery.html" class="hover-underline">Portfolio</a>
+        <a href="Portfolio.html" class="hover-underline">About</a>
+        <a href="index.html#contact" class="hover-underline">Contact</a>
       </div>
-      <button class="menu-toggle">
-        <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <button class="menu-toggle" aria-label="Open mobile menu" aria-expanded="false">
+        <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <line x1="3" y1="12" x2="21" y2="12"></line>
           <line x1="3" y1="6" x2="21" y2="6"></line>
           <line x1="3" y1="18" x2="21" y2="18"></line>
         </svg>
       </button>
     </div>
-    <div class="mobile-menu">
-      <a href="#home">Home</a>
-      <a href="#portfolio">Portfolio</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="index.html#home">Home</a>
+      <a href="gallery.html">Portfolio</a>
+      <a href="Portfolio.html">About</a>
+      <a href="index.html#contact">Contact</a>
     </div>
   </nav>
 
   <div class="masonry">
-    <div class="masonry-item"><img src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain1.webp" alt=""></div>
-    <div class="masonry-item"><img src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain2.webp" alt=""></div>
-    <div class="masonry-item"><img src="/img/photo_2025-04-01_20-09-58.jpg" alt=""></div>
-    <div class="masonry-item"><img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(18).webp" alt=""></div>
-    <div class="masonry-item"><img src="/img/photo_2025-04-01_20-09-58.jpg" alt=""></div>
-    <div class="masonry-item"><img src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain2.webp" alt=""></div>
-    
-    <div class="masonry-item"><img src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain1.webp" alt=""></div>
-    <div class="masonry-item"><img src="/img/photo_2025-04-01_20-10-06.jpg" alt=""></div>
-    <div class="masonry-item"><img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp" alt=""></div>
-    <div class="masonry-item"><img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(18).webp" alt=""></div>
-    <div class="masonry-item"><img src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain3.webp" alt=""></div>
-    <div class="masonry-item"><img src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain2.webp" alt=""></div>
-    
+    <div class="masonry-item"><img src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain1.webp"
+        alt="Majestic mountain landscape with snow caps"></div>
+    <div class="masonry-item"><img src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain2.webp"
+        alt="Beautiful forest trail in the mountains"></div>
+    <div class="masonry-item"><img src="/img/photo_2025-04-01_20-09-58.jpg"
+        alt="Creative portrait work by Mohamed Abid"></div>
+    <div class="masonry-item"><img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(18).webp"
+        alt="Lush green valley view"></div>
+    <div class="masonry-item"><img src="/img/photo_2025-04-01_20-09-58.jpg" alt="Design illustration showcase"></div>
+    <div class="masonry-item"><img src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain2.webp"
+        alt="Rugged mountain peaks under cloudy sky"></div>
+
+    <div class="masonry-item"><img src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain1.webp"
+        alt="Sunlight hitting the mountain range"></div>
+    <div class="masonry-item"><img src="/img/photo_2025-04-01_20-10-06.jpg" alt="Abstract motion graphics still"></div>
+    <div class="masonry-item"><img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
+        alt="Calm lake reflection in mountains"></div>
+    <div class="masonry-item"><img src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(18).webp"
+        alt="Scenic natural landscape"></div>
+    <div class="masonry-item"><img src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain3.webp"
+        alt="Alpine peaks at dusk"></div>
+    <div class="masonry-item"><img src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain2.webp"
+        alt="Deep forest valley landscape"></div>
+
   </div>
 
   <!-- whatsapp icon -->
@@ -205,44 +222,49 @@
 
   <!-- Footer -->
   <footer class="footer">
-    <p>© 2025 ms creations  All rights reserved.</p>
+    <p>© 2025 ms creations All rights reserved.</p>
   </footer>
 
   <script>
     // Mobile Menu Toggle
-const menuToggle = document.querySelector('.menu-toggle');
-const mobileMenu = document.querySelector('.mobile-menu');
+    const menuToggle = document.querySelector('.menu-toggle');
+    const mobileMenu = document.querySelector('.mobile-menu');
 
-menuToggle.addEventListener('click', () => {
-  mobileMenu.classList.toggle('active');
-  const menuIcon = menuToggle.querySelector('svg');
-  if (mobileMenu.classList.contains('active')) {
-    menuIcon.innerHTML = `
+    menuToggle.addEventListener('click', () => {
+      const isActive = mobileMenu.classList.toggle('active');
+      menuToggle.setAttribute('aria-expanded', isActive);
+      const menuIcon = menuToggle.querySelector('svg');
+      if (mobileMenu.classList.contains('active')) {
+        menuIcon.innerHTML = `
       <line x1="18" y1="6" x2="6" y2="18"></line>
       <line x1="6" y1="6" x2="18" y2="18"></line>
     `;
-  } else {
-    menuIcon.innerHTML = `
+      } else {
+        menuIcon.innerHTML = `
       <line x1="3" y1="12" x2="21" y2="12"></line>
       <line x1="3" y1="6" x2="21" y2="6"></line>
       <line x1="3" y1="18" x2="21" y2="18"></line>
     `;
-  }
-});
+      }
+    });
 
-// Close mobile menu when clicking outside
-document.addEventListener('click', (e) => {
-  if (!menuToggle.contains(e.target) && !mobileMenu.contains(e.target)) {
-    mobileMenu.classList.remove('active');
-    const menuIcon = menuToggle.querySelector('svg');
-    menuIcon.innerHTML = `
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!menuToggle.contains(e.target) && !mobileMenu.contains(e.target)) {
+        if (mobileMenu.classList.contains('active')) {
+          mobileMenu.classList.remove('active');
+          menuToggle.setAttribute('aria-expanded', 'false');
+          const menuIcon = menuToggle.querySelector('svg');
+          menuIcon.innerHTML = `
       <line x1="3" y1="12" x2="21" y2="12"></line>
       <line x1="3" y1="6" x2="21" y2="6"></line>
       <line x1="3" y1="18" x2="21" y2="18"></line>
     `;
-  }
-});
+        }
+      }
+    });
   </script>
 
 </body>
+
 </html>

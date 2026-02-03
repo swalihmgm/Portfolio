@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About Page</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -17,23 +18,27 @@
     }
 
     :root {
-    --font-size-display-xl: 3rem; /* Base size */
-    --line-height-display-xl: 1.2;
+      --font-size-display-xl: 3rem;
+      /* Base size */
+      --line-height-display-xl: 1.2;
 
-    --font-size-heading-multiplier: 1; /* You can tweak this to scale up/down globally */
-    --line-height-heading-multiplier: 1;
+      --font-size-heading-multiplier: 1;
+      /* You can tweak this to scale up/down globally */
+      --line-height-heading-multiplier: 1;
     }
+
     .font-display.font-xl,
-    .font-display > .font-xl {
-    font-size: calc(var(--font-size-display-xl) * var(--font-size-heading-multiplier));
-    line-height: calc(var(--line-height-display-xl) * var(--line-height-heading-multiplier));
-    font-weight: 700;
-    font-family: 'Inter', sans-serif;
+    .font-display>.font-xl {
+      font-size: calc(var(--font-size-display-xl) * var(--font-size-heading-multiplier));
+      line-height: calc(var(--line-height-display-xl) * var(--line-height-heading-multiplier));
+      font-weight: 700;
+      font-family: 'Inter', sans-serif;
     }
-     @media (max-width: 768px) {
-    :root {
-     --font-size-display-xl: 2rem;
-    }
+
+    @media (max-width: 768px) {
+      :root {
+        --font-size-display-xl: 2rem;
+      }
     }
 
 
@@ -54,81 +59,89 @@
       color: #fff;
       background-color: #000000;
     }
-    body, html {
-    height: 100%;
-    overflow: hidden; /* prevent full-page scrolling */
+
+    body,
+    html {
+      height: 100%;
+      overflow: hidden;
+      /* prevent full-page scrolling */
     }
 
-        /* Navigation */
+    /* Navigation */
     .navbar {
-    position: fixed;
-    width: 100%;
-    /* background: rgba(0, 0, 0, 0.9); */
-    backdrop-filter: blur(8px);
-    color: white;
-    z-index: 1000;
+      position: fixed;
+      width: 100%;
+      /* background: rgba(0, 0, 0, 0.9); */
+      backdrop-filter: blur(8px);
+      color: white;
+      z-index: 1000;
 
     }
 
     .nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 5rem;
-    padding: 0 2rem;
-    max-width: 1280px;
-    margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 5rem;
+      padding: 0 2rem;
+      max-width: 1280px;
+      margin: 0 auto;
     }
 
-    .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    letter-spacing: -0.025em;
+    .logo,
+    .logo:link,
+    .logo:visited {
+      font-size: 1.5rem;
+      font-weight: bold;
+      letter-spacing: -0.025em;
+      text-decoration: none;
+      color: #ffffff !important;
     }
 
     .nav-links {
-    display: none;
+      display: none;
     }
 
     .nav-links a {
-    color: white;
-    text-decoration: none;
-    margin-left: 3rem;
+      color: white;
+      text-decoration: none;
+      margin-left: 3rem;
     }
 
     .menu-toggle {
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
+      background: none;
+      border: none;
+      color: white;
+      cursor: pointer;
     }
 
     .mobile-menu {
-    display: none;
-    padding: 1rem;
-    background: rgba(0, 0, 0, 0.95);
+      display: none;
+      padding: 1rem;
+      background: rgba(0, 0, 0, 0.95);
     }
 
     .mobile-menu.active {
-    display: block;
+      display: block;
     }
 
     .mobile-menu a {
-    display: block;
-    color: white;
-    text-decoration: none;
-    padding: 0.75rem;
+      display: block;
+      color: white;
+      text-decoration: none;
+      padding: 0.75rem;
     }
 
     @media (min-width: 768px) {
-    .nav-links {
+      .nav-links {
         display: flex;
-    }
-    
-    .menu-toggle {
+      }
+
+      .menu-toggle {
         display: none;
+      }
     }
-    }
+
     /* about section */
     .container {
       display: grid;
@@ -136,8 +149,8 @@
       height: 100vh;
       gap: 40px;
       padding: 80px 40px 40px 40px;
-      
-      
+
+
     }
 
     .sidebar {
@@ -156,10 +169,10 @@
       color: #aaa;
       cursor: pointer;
     }
-    
+
     .sidebar h6 i {
-    margin-right: 8px;
-    /* color: #ec4899; */
+      margin-right: 8px;
+      /* color: #ec4899; */
     }
 
 
@@ -174,11 +187,11 @@
     }
 
     .image-info img {
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    object-fit: contain;
-    border: 3px solid #333;
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      object-fit: contain;
+      border: 3px solid #333;
     }
 
 
@@ -224,6 +237,11 @@
       gap: 10px;
     }
 
+    .contact-links a {
+      text-decoration: none;
+      color: inherit;
+    }
+
     .contact-links h6 {
       background-color: #1a1a1a;
       padding: 6px 12px;
@@ -231,9 +249,11 @@
       font-size: 14px;
       font-weight: 300;
       border: 1px solid #c8c8c8;
+      display: inline-block;
     }
+
     .contact-links i {
-    margin-right: 8px;
+      margin-right: 8px;
     }
 
 
@@ -246,10 +266,12 @@
     .work-experience h1 {
       margin-top: 20px;
     }
-    .Technical-skills{
+
+    .Technical-skills {
       margin-top: 20px;
     }
-    .Technical-skills li{
+
+    .Technical-skills li {
       list-style: none;
       font-size: 20px;
       font-weight: 700;
@@ -260,7 +282,7 @@
     @media (max-width: 1024px) {
       .container {
         grid-template-columns: 300px 1fr;
-        
+
       }
 
       .sidebar {
@@ -286,62 +308,64 @@
 
 
     /* cursor */
-.cursor-shadow {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 150px;
-  height: 150px;
-  background: var(--primary-gradient);
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: -1;
-  transform: translate(-50%, -50%);
-  filter: blur(100px);
-  transition: top 0.2s ease, left 0.2s ease;
-  opacity: 0;
-}
+    .cursor-shadow {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 150px;
+      height: 150px;
+      background: var(--primary-gradient);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: -1;
+      transform: translate(-50%, -50%);
+      filter: blur(100px);
+      transition: top 0.2s ease, left 0.2s ease;
+      opacity: 0;
+    }
 
-.dark-section:hover ~ .cursor-shadow {
-  opacity: 1;
-}
+    .dark-section:hover~.cursor-shadow {
+      opacity: 1;
+    }
   </style>
 </head>
+
 <body>
 
-    <!-- Navigation -->
-  <nav class="navbar dark-section">
+  <!-- Navigation -->
+  <nav class="navbar dark-section" role="navigation" aria-label="Main Navigation">
     <div class="nav-container">
-      <span class="logo">Portfolio</span>
+      <a href="index.html" class="logo" aria-label="Mohamed Abid Home">Mohamed Abid</a>
       <div class="nav-links">
-        <a href="index.html" class="hover-underline">Home</a>
-        <a href="#portfolio" class="hover-underline">Portfolio</a>
-        <a href="#about" class="hover-underline">About</a>
-        <a href="#contact" class="hover-underline">Contact</a>
+        <a href="index.html#home" class="hover-underline">Home</a>
+        <a href="gallery.html" class="hover-underline">Portfolio</a>
+        <a href="Portfolio.html" class="hover-underline">About</a>
+        <a href="index.html#contact" class="hover-underline">Contact</a>
       </div>
-      <button class="menu-toggle">
-        <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <button class="menu-toggle" aria-label="Open mobile menu" aria-expanded="false">
+        <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <line x1="3" y1="12" x2="21" y2="12"></line>
           <line x1="3" y1="6" x2="21" y2="6"></line>
           <line x1="3" y1="18" x2="21" y2="18"></line>
         </svg>
       </button>
     </div>
-    <div class="mobile-menu">
-      <a href="#home">Home</a>
-      <a href="#portfolio">Portfolio</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="index.html#home">Home</a>
+      <a href="gallery.html">Portfolio</a>
+      <a href="Portfolio.html">About</a>
+      <a href="index.html#contact">Contact</a>
     </div>
   </nav>
 
   <!-- about page -->
   <div class="container hero dark-section">
     <aside class="sidebar">
-        <h6><i class="fas fa-minus"></i> Introduction</h6>
-        <h6><i class="fas fa-minus"></i> Work Experience</h6>
-        <h6><i class="fas fa-minus"></i> Technical Skills</h6>
-        
+      <h6><i class="fas fa-minus"></i> Introduction</h6>
+      <h6><i class="fas fa-minus"></i> Work Experience</h6>
+      <h6><i class="fas fa-minus"></i> Technical Skills</h6>
+
     </aside>
 
     <div class="profile-info">
@@ -357,16 +381,22 @@
     </div>
 
     <main class="main-content">
-        <h1 class="font-display font-xl">Mohammed Abid</h1>
-        <h4 class="font-display font-xs">Visual Designer</h4>
+      <h1 class="font-display font-xl">Mohammed Abid</h1>
+      <h4 class="font-display font-xs">Visual Designer</h4>
 
 
       <div class="contact-links">
-        <h6><i class="fas fa-envelope"></i> Email</h6>
-        <h6><i class="fab fa-linkedin"></i> LinkedIn</h6>
-        <h6><i class="fab fa-whatsapp"></i> +91 623 5393 656</h6>
+        <a href="mailto:abidmuhammed656@gmail.com" aria-label="Email Mohamed Abid">
+          <h6><i class="fas fa-envelope"></i> Email</h6>
+        </a>
+        <a href="#" aria-label="Mohamed Abid LinkedIn">
+          <h6><i class="fab fa-linkedin"></i> LinkedIn</h6>
+        </a>
+        <a href="https://wa.me/916235393656" aria-label="WhatsApp Mohamed Abid">
+          <h6><i class="fab fa-whatsapp"></i> +91 623 5393 656</h6>
+        </a>
       </div>
-      
+
 
       <p>
         Hi, I'm Mohammed Abid, a freelance designer with expertise in graphic
@@ -376,20 +406,32 @@
 
       <div class="work-experience">
         <h1>Work Experience</h1>
+        <p>5 years of experience in the graphic design field as a freelancer, delivering high-quality visual solutions
+          for various clients.</p>
       </div>
       <div class="Technical-skills">
         <h1>Technical skills</h1>
         <ul>
           <li>Adobe Illustrator</li>
-          <p>A vector graphics editor ideal for creating logos, icons, illustrations, and detailed design elements. I use Illustrator for scalable artwork, branding assets, and complex vector designs with precision and creativity.</p>
+          <p>A vector graphics editor ideal for creating logos, icons, illustrations, and detailed design elements. I
+            use Illustrator for scalable artwork, branding assets, and complex vector designs with precision and
+            creativity.</p>
           <li>Adobe Photoshop</li>
-          <p>A vector graphics editor ideal for creating logos, icons, illustrations, and detailed design elements. I use Illustrator for scalable artwork, branding assets, and complex vector designs with precision and creativity.</p>
+          <p>A vector graphics editor ideal for creating logos, icons, illustrations, and detailed design elements. I
+            use Illustrator for scalable artwork, branding assets, and complex vector designs with precision and
+            creativity.</p>
           <li>Adobe Premier Pro</li>
-          <p>A professional video editing software used to craft high-quality videos for web, social media, and film. I work with Premiere Pro to edit footage, add transitions, apply effects, and deliver polished video content.</p>
+          <p>A professional video editing software used to craft high-quality videos for web, social media, and film. I
+            work with Premiere Pro to edit footage, add transitions, apply effects, and deliver polished video content.
+          </p>
           <li>Adobe xd</li>
-          <p>A user experience (UX) and user interface (UI) design tool tailored for web and mobile app prototypes. I use XD to create wireframes, interactive prototypes, and design systems that ensure seamless user experiences.</p>
+          <p>A user experience (UX) and user interface (UI) design tool tailored for web and mobile app prototypes. I
+            use XD to create wireframes, interactive prototypes, and design systems that ensure seamless user
+            experiences.</p>
           <li>figma</li>
-          <p>A collaborative web-based design tool for UI/UX design and prototyping. I use Figma for designing user interfaces, sharing live prototypes with clients and developers, and working in real-time with teams for faster iteration.</p>
+          <p>A collaborative web-based design tool for UI/UX design and prototyping. I use Figma for designing user
+            interfaces, sharing live prototypes with clients and developers, and working in real-time with teams for
+            faster iteration.</p>
         </ul>
       </div>
     </main>
@@ -400,61 +442,64 @@
   <script>
 
     // Mobile Menu Toggle
-const menuToggle = document.querySelector('.menu-toggle');
-const mobileMenu = document.querySelector('.mobile-menu');
+    const menuToggle = document.querySelector('.menu-toggle');
+    const mobileMenu = document.querySelector('.mobile-menu');
 
-menuToggle.addEventListener('click', () => {
-  mobileMenu.classList.toggle('active');
-  const menuIcon = menuToggle.querySelector('svg');
-  if (mobileMenu.classList.contains('active')) {
-    menuIcon.innerHTML = `
+    menuToggle.addEventListener('click', () => {
+      const isActive = mobileMenu.classList.toggle('active');
+      menuToggle.setAttribute('aria-expanded', isActive);
+      const menuIcon = menuToggle.querySelector('svg');
+      if (mobileMenu.classList.contains('active')) {
+        menuIcon.innerHTML = `
       <line x1="18" y1="6" x2="6" y2="18"></line>
       <line x1="6" y1="6" x2="18" y2="18"></line>
     `;
-  } else {
-    menuIcon.innerHTML = `
+      } else {
+        menuIcon.innerHTML = `
       <line x1="3" y1="12" x2="21" y2="12"></line>
       <line x1="3" y1="6" x2="21" y2="6"></line>
       <line x1="3" y1="18" x2="21" y2="18"></line>
     `;
-  }
-});
+      }
+    });
 
-// Close mobile menu when clicking outside
-document.addEventListener('click', (e) => {
-  if (!menuToggle.contains(e.target) && !mobileMenu.contains(e.target)) {
-    mobileMenu.classList.remove('active');
-    const menuIcon = menuToggle.querySelector('svg');
-    menuIcon.innerHTML = `
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!menuToggle.contains(e.target) && !mobileMenu.contains(e.target)) {
+        mobileMenu.classList.remove('active');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        const menuIcon = menuToggle.querySelector('svg');
+        menuIcon.innerHTML = `
       <line x1="3" y1="12" x2="21" y2="12"></line>
       <line x1="3" y1="6" x2="21" y2="6"></line>
       <line x1="3" y1="18" x2="21" y2="18"></line>
     `;
-  }
-});
+      }
+    });
 
     // cursor animation
 
-  const cursor = document.querySelector('.cursor-shadow');
-  let targetX = 0;
-  let targetY = 0;
-  let currentX = 0;
-  let currentY = 0;
+    const cursor = document.querySelector('.cursor-shadow');
+    let targetX = 0;
+    let targetY = 0;
+    let currentX = 0;
+    let currentY = 0;
 
-  // Follow the cursor slowly
-  window.addEventListener('mousemove', (e) => {
-    targetX = e.clientX;
-    targetY = e.clientY;
-  });
+    // Follow the cursor slowly
+    window.addEventListener('mousemove', (e) => {
+      targetX = e.clientX;
+      targetY = e.clientY;
+    });
 
-  function animate() {
-    currentX += (targetX - currentX) * 0.1;
-    currentY += (targetY - currentY) * 0.1;
-    cursor.style.left = `${currentX}px`;
-    cursor.style.top = `${currentY}px`;
-    requestAnimationFrame(animate);
-  }
-  animate();
+    function animate() {
+      currentX += (targetX - currentX) * 0.1;
+      currentY += (targetY - currentY) * 0.1;
+      cursor.style.left = `${currentX}px`;
+      cursor.style.top = `${currentY}px`;
+      requestAnimationFrame(animate);
+    }
+    animate();
   </script>
 </body>
+
 </html>

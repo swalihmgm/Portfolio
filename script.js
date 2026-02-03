@@ -3,9 +3,10 @@ const menuToggle = document.querySelector('.menu-toggle');
 const mobileMenu = document.querySelector('.mobile-menu');
 
 menuToggle.addEventListener('click', () => {
-  mobileMenu.classList.toggle('active');
+  const isActive = mobileMenu.classList.toggle('active');
+  menuToggle.setAttribute('aria-expanded', isActive);
   const menuIcon = menuToggle.querySelector('svg');
-  if (mobileMenu.classList.contains('active')) {
+  if (isActive) {
     menuIcon.innerHTML = `
       <line x1="18" y1="6" x2="6" y2="18"></line>
       <line x1="6" y1="6" x2="18" y2="18"></line>
@@ -22,13 +23,16 @@ menuToggle.addEventListener('click', () => {
 // Close mobile menu when clicking outside
 document.addEventListener('click', (e) => {
   if (!menuToggle.contains(e.target) && !mobileMenu.contains(e.target)) {
-    mobileMenu.classList.remove('active');
-    const menuIcon = menuToggle.querySelector('svg');
-    menuIcon.innerHTML = `
-      <line x1="3" y1="12" x2="21" y2="12"></line>
-      <line x1="3" y1="6" x2="21" y2="6"></line>
-      <line x1="3" y1="18" x2="21" y2="18"></line>
-    `;
+    if (mobileMenu.classList.contains('active')) {
+      mobileMenu.classList.remove('active');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      const menuIcon = menuToggle.querySelector('svg');
+      menuIcon.innerHTML = `
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      `;
+    }
   }
 });
 
@@ -118,7 +122,16 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         behavior: 'smooth'
       });
       // Close mobile menu if open
-      mobileMenu.classList.remove('active');
+      if (mobileMenu.classList.contains('active')) {
+        mobileMenu.classList.remove('active');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        const menuIcon = menuToggle.querySelector('svg');
+        menuIcon.innerHTML = `
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        `;
+      }
     }
   });
 });
